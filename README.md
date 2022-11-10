@@ -1,8 +1,8 @@
-# Vultr API Rubygem
+# FreeAgent API Rubygem
 
-[![Build Status](https://github.com/tolbkni/vultr.rb/workflows/Tests/badge.svg)](https://github.com/tolbkni/vultr.rb/actions)
+[![Build Status](https://github.com/websprung/freeagent/workflows/Tests/badge.svg)](https://github.com/websprung/freeagent/actions)
 
-The easiest and most complete rubygem for [Vultr](https://www.vultr.com). Currently supports [API v2](https://www.vultr.com/api/v2).
+A rubygem for [FreeAgent](https://dev.freeagent.com).
 
 ## Installation
 
@@ -20,19 +20,19 @@ Or install it yourself as:
 
 ## Usage
 
-To access the API, you'll need to create a `Vultr::Client` and pass in your API key. You can find your API key at [https://my.vultr.com/settings](https://my.vultr.com/settings/#settingsapi)
+To access the API, you'll need to create a `FreeAgent::Client` and pass in your API key. You can find your API key at [https://my.vultr.com/settings](https://my.vultr.com/settings/#settingsapi)
 
 ```ruby
-client = Vultr::Client.new(api_key: ENV["VULTR_API_KEY"])
+client = FreeAgent::Client.new(api_key: ENV["FREEAGENT_API_KEY"])
 ```
 
 The client then gives you access to each of the resources.
 
 ## Resources
 
-The gem maps as closely as we can to the Vultr API so you can easily convert API examples to gem code.
+The gem maps as closely as we can to the FreeAgent API so you can easily convert API examples to gem code.
 
-Responses are created as objects like `Vultr::Account`. Having types like `Vultr::User` is handy for understanding what type of object you're working with. They're built using OpenStruct so you can easily access data in a Ruby-ish way.
+Responses are created as objects like `FreeAgent::Account`. Having types like `FreeAgent::User` is handy for understanding what type of object you're working with. They're built using OpenStruct so you can easily access data in a Ruby-ish way.
 
 ##### Pagination
 
@@ -40,20 +40,20 @@ Responses are created as objects like `Vultr::Account`. Having types like `Vultr
 
 ```ruby
 results = client.applications.list(per_page: 5)
-#=> Vultr::Collection
+#=> FreeAgent::Collection
 
 results.total
 #=> 48
 
 results.data
-#=> [#<Vultr::Application>, #<Vultr::Application>]
+#=> [#<FreeAgent::Application>, #<FreeAgent::Application>]
 
 results.next_cursor
 #=> "bmV4dF9fMTU="
 
 # Retrieve the next page
 client.applications.list(per_page: 5, cursor: results.next_cursor)
-#=> Vultr::Collection
+#=> FreeAgent::Collection
 ```
 
 ### Account

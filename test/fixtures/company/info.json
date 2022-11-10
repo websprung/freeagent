@@ -1,0 +1,12 @@
+{
+  "company": 
+  {
+    "type": "UkLimitedCompany",
+    "currency": "GBP",
+    "mileage_units": "miles",
+    "company_start_date": "2010-07-01",
+    "sales_tax_registration_status": "Registered",
+    "email": "hello@example.com"
+  }
+}
+

@@ -1,5 +1,5 @@
 $LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
-require "vultr"
+require "free_agent"
 require "minitest/autorun"
 require "faraday"
 require "json"

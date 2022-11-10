@@ -1,6 +1,6 @@
 == 1.0.0
 
-* Vultr API v2 support
+* FreeAgent API v2 support
 
 == 0.4.3 / 2019-10-8
 
@@ -14,7 +14,7 @@
 
 == 0.4.1 / 2018-09-25
 
-* Make the params of Vultr::Server.list correct.
+* Make the params of FreeAgent::Server.list correct.
 * Fix #11, pass params to query string only giving their values.
 
 == 0.4.0 / 2018-09-12
